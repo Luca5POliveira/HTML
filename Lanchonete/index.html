@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Lanchonete</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Lanchonete Legal</h1>
+    <section>
+        <h2>Cadastro de Funcionário</h2>
+        <form id="formFuncionario">
+            <label for="nomeFuncionario">Nome:</label>
+            <input type="text" id="nomeFuncionario" required>
+            <label for="cpfFuncionario">CPF:</label>
+            <input type="text" id="cpfFuncionario" required minlength="11" maxlength="11">
+            <button type="submit">Cadastrar Funcionário</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Cadastro de Pedido</h2>
+        <form id="formPedido">
+            <label for="nomePedido">Nome do Pedido:</label>
+            <input type="text" id="nomePedido" required>
+            <label for="descricaoPedido">Descrição do Pedido:</label>
+            <input type="text" id="descricaoPedido">
+
+            <label for="responsavelPedido">Responsável:</label>
+            <select id="responsavelPedido" required></select>
+
+            <label for="statusPedido">Status:</label>
+            <select id="statusPedido">
+                <option value="A Fazer">A Fazer</option>
+                <option value="Fazendo">Fazendo</option>
+                <option value="Pronto para entrega">Pronto para entrega</option>
+            </select>
+            <button type="submit">Cadastrar Pedido</button>
+        </form>
+    </section>
+
+    <!-- Lista dos Pedidos -->
+    <section>
+        <h2>Pedidos Cadastrados</h2>
+        <div id="listaPedidos"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
